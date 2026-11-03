@@ -1,0 +1,501 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+}
+
+/* pie de página */
+
+.footer{
+    background-color: #1b1b1b;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #303030;
+}
+
+.footer p{
+    color: #999;
+    font-size: 14px;
+}
+
+/* Barra de navegación */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #1b1b1b;
+}
+
+/* Logo */
+
+.logo{
+    color: #8b5cf6;
+    font-size: 28px;
+    margin: 0;
+}
+
+/* enlaces menú */
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* efecto al pasar el mouse */
+
+.menu a:hover{
+    color: #a78bfa;
+}
+
+/* portada principal */
+
+.portada{
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.portada h2{
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.portada p{
+    color: #bdbdbd;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+/* botón principal */
+
+.boton{
+    display: inline-block;
+    background-color: #7c3aed;
+    color: white;
+
+    padding: 14px 28px;
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* efecto botón */
+
+.boton:hover{
+    background-color: #6d28d9;
+}
+
+/* Sección de juegos destacados */
+
+.juegos-destacados{
+    padding: 30px 50px 60px;
+}
+
+.juegos-destacados h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+/* contenedor para las tarjetas */
+
+.contenedor-juegos{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Tarjetita individual */
+
+.tarjeta-juego{
+    background-color: #1f1f1f;
+    width: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #303030;
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+/* Imagen del juego */
+
+.tarjeta-juego img{
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+/* información */
+
+.info-juego{
+    padding: 15px;
+}
+
+.info-juego h3{
+    margin-top: 0;
+    color: #a78bfa;
+}
+
+.info-juego p{
+    color: #bdbdbd;
+}
+
+/* Efecto al pasar el mouse */
+
+.tarjeta-juego:hover{
+    transform: translateY(-8px);
+    border-color: #8b5cf6;
+}
+
+.tarjeta-juego:hover img{
+    transform: scale(1.04);
+}
+
+/* Buscador de juegos */
+
+.buscador{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.buscador input{
+    width: 80%;
+    max-width: 400px;
+    padding: 12px 15px;
+
+    border: 1px solid #444;
+    border-radius: 8px;
+
+    background-color: #1f1f1f;
+    color: white;
+
+    font-size: 16px;
+    outline: none;
+}
+
+.buscador input:focus{
+    border-color: #8b5cf6;
+}
+
+.formulario-contenedor{
+    width: 90%;
+    max-width: 420px;
+    margin: 60px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #1f1f1f;
+    border: 1px solid #303030;
+    border-radius: 12px;
+}
+
+.formulario-contenedorh2{
+    text-align: center;
+    color: #a78bfa;
+}
+
+.formulario-contenedor>p{
+    text-align: center;
+    color: #bdbdbd;
+}
+
+.formulario-contenedor form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.formulario-contenedor label{
+    margin-top: 8px;
+}
+
+.formulario-contenedor input{
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #121212;
+    color: white;
+    font-size: 16px;
+}
+
+.formulario-contenedor input:focus{
+    outline: none;
+    border-color: #8b5cf6;
+}
+
+.formulario-contenedor button{
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 12px;
+}
+
+
+.usuario-menu{
+    color: #a78bfa;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+.perfil-contenedor{
+    width: 90%;
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #1f1f1f;
+    border: 1px solid #303030;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.perfil-contenedor h2{
+    color: #a78bfa;
+    font-size: 30px;
+}
+
+.perfil-contenedor > p{
+    color: #bdbdbd;
+}
+
+.perfil-datos{
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #121212;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.perfil-datos p{
+    color: #bdbdbd;
+    overflow-wrap: anywhere;
+    margin: 15px 0;
+}
+
+.perfil-datos strong{
+    color: #a78bfa;
+}
+
+
+.foto-perfil,
+.foto-perfil-vacia{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px auto;
+    border: 3px solid #8b5cf6;
+}
+
+.foto-perfil-vacia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #121212;
+    color: #a78bfa;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.perfil-contenedor form{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* selector foto perfil */
+#foto_perfil {
+    width: 100%;
+    padding: 10px;
+    background-color: #121212;
+    color: white;
+    border: 1px solid #8b5cf6;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* boton para elegir archivo */
+#foto_perfil::file-selector-button {
+    background-color: #8b5cf6;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    margin-right: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+/* Efecto al pasar el mouse */
+#foto_perfil::file-selector-button:hover{
+    background-color: #a78bfa;
+}
+
+
+/* inventario de los juegos */
+
+.catalogo-contenedor{
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.catalogo-contenedor h2{
+    color: #a78bfa;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.catalogo-contenedor > p{
+    margin-bottom: 30px;
+    color: #cccccc;
+}
+
+.contenedor-juegos{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.contenedor-juegos .tarjeta-juego{
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: left;
+    overflow: hidden;
+    border: 1px solid #39275c;
+    border-radius: 12px;
+    background-color: #18151f;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.contenedor-juegos .tarjeta-juego:hover{
+    transform: translateY(-5px);
+    border-color: #a78bfa;
+}
+
+.contenedor-juegos .tarjeta-juego img{
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.contenedor-juegos .info-juego{
+    padding: 15px;
+}
+
+.contenedor-juegos .info-juego h3{
+    margin-top: 0;
+    color: #c4b5fd;
+}
+
+.contenedor-juegos .info-juego p{
+    margin-bottom: 0;
+    color: #cccccc;
+}
+
+@media (max-width: 750px){
+    .contenedor-juegos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px){
+    .contenedor-juegos {
+        grid-template-columns: 1fr;
+    }
+}
+
+.juegos-destacados{
+    grid-template-columns: repeat(3, minmax(0, 280px));
+    justify-content: center;
+}
+
+
+/* Ficha individual de los juegitos*/
+
+.detalle-contenedor{
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.detalle-contenedor > h2{
+    color: #a78bfa;
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+
+.detalle-juego{
+    display: grid;
+    grid-template-columns: 350px minmax(0, 1fr);
+    gap: 35px;
+    align-items: start;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.detalle-imagen img{
+    display: block;
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #39275c;
+}
+
+.detalle-informacion{
+    background-color: #18151f;
+    border: 1px solid #39275c;
+    border-radius: 12px;
+    padding: 25px;
+    color: #cccccc;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.detalle-informacion strong{
+    color: #c4b5fd;
+}
+
+.detalle-informacion h3{
+    color: #a78bfa;
+    margin-top: 20px;
+}
+
+.detalle-contenedor > .boton{
+    display: inline-block;
+    text-decoration: none;
+}
+
+@media (max-width: 750px){
+    .detalle-juego {
+        grid-template-columns: 1fr;
+    }
+
+    .detalle-imagen {
+        max-width: 350px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+

@@ -1,0 +1,122 @@
+==========================================
+-- Plantilla de base de datos (pasos)
+-- Como un tutorial digamos 
+==========================================
+
+-- Primer paso crear la base de datos(Este es opcional porque tambien lo podes hacer manualmente y mas cómodo)
+CREATE DATABASE IF NOT EXISTS gamehub
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_general_ci;
+
+-- Despues la seleccionas
+USE gamehub;
+
+-- ==========================================
+-- Aca creamos la tabla de usuarios
+-- ==========================================
+
+DROP TABLE IF EXISTS usuarios;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    correo VARCHAR(150) NOT NULL UNIQUE,
+    contrasena VARCHAR(255) NOT NULL,
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    foto_perfil VARCHAR(255)
+);
+
+-- ==========================================
+-- Tambien la tabla de juegos
+-- ==========================================
+
+DROP TABLE IF EXISTS juegos;
+
+CREATE TABLE juegos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    genero VARCHAR(50) NOT NULL,
+    descripcion TEXT,
+    imagen VARCHAR(255),
+    descripcion_completa TEXT,
+    anio_lanzamiento INT,
+    curiosidad TEXT
+);
+
+-- ==========================================
+-- Esta es la carga inicial de juegos
+-- ==========================================
+
+INSERT INTO juegos (
+    nombre,
+    genero,
+    descripcion,
+    imagen,
+    descripcion_completa,
+    anio_lanzamiento,
+    curiosidad
+) VALUES
+
+(
+    'Minecraft',
+    'Sandbox',
+    'Un juego de construccion y exploracion.',
+    'img/minecraft.jpg',
+    'Minecraft es un videojuego de mundo abierto donde los jugadores pueden explorar, construir estructuras, recolectar recursos y sobrevivir frente a diferentes criaturas.',
+    2011,
+    'Los Creepers surgieron accidentalmente por un error al modelar un cerdo.'
+),
+
+(
+    'Resident Evil 2',
+    'Terror',
+    'Un juego de supervivencia y terror.',
+    'img/re2.jpg',
+    'Resident Evil 2 sigue las historias de Leon S. Kennedy y Claire Redfield mientras intentan sobrevivir a un brote de zombis en Raccoon City.',
+    2019,
+    'Es una nueva version del Resident Evil 2 original, publicado en 1998.'
+),
+
+(
+    'Terraria',
+    'Aventura',
+    'Exploracion, construccion y combate en 2D.',
+    'img/terraria.jpg',
+    'Terraria es un videojuego de aventura en dos dimensiones que combina exploracion, construccion, fabricacion de objetos y combates contra enemigos y jefes.',
+    2011,
+    'Su mundo se genera de forma procedural, por lo que cada partida puede ser diferente.'
+),
+
+(
+    'The Last of Us Part I',
+    'Accion y supervivencia',
+    'Una aventura narrativa en un mundo postapocaliptico.',
+    'img/tlou.jpg',
+    'La historia sigue a Joel y Ellie durante un peligroso viaje por un mundo devastado por una infeccion que transformo a gran parte de la humanidad.',
+    2022,
+    'Esta version fue reconstruida desde cero e incluye la expansion Left Behind.'
+),
+
+(
+    'Counter-Strike 2',
+    'Shooter tactico',
+    'Un juego competitivo de disparos por equipos.',
+    'img/cs2.jpg',
+    'Counter-Strike 2 es un shooter tactico multijugador en el que dos equipos, terroristas y antiterroristas, se enfrentan en distintos modos de juego.',
+    2023,
+    'Counter-Strike 2 reemplazo a Counter-Strike: Global Offensive en Steam.'
+),
+
+(
+    'Left 4 Dead 2',
+    'Shooter y supervivencia',
+    'Un juego cooperativo contra hordas de infectados.',
+    'img/l4d2.jpg',
+    'Left 4 Dead 2 es un videojuego cooperativo de supervivencia donde cuatro jugadores deben atravesar escenarios infestados de zombis y trabajar juntos para sobrevivir.',
+    2009,
+    'Su sistema Director adapta los encuentros y la aparicion de enemigos segun el desarrollo de la partida.'
+);
+
+-- ==========================================
+-- ya con eso debería estar todo completo
+-- ==========================================
